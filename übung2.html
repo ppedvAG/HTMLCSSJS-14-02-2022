@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Übung 2</title>
+    <script defer src="static/script/uebung2.js"></script>
+</head>
+<body>
+    <form onsubmit="return false;">
+        <input type="text" id="inp" onkeyup="setText(this)"> <!-- das input-Element wird nun als
+        Parameter der Funktion setText übergeben -->
+    </form>
+    <p id="output"></p>
+</body>
+</html>
+<!-- Erstelle ein Formular mit einem text-input -->
+<!--
+    Jedesmal wenn wir tippen soll der aktuelle Text aus dem Textfeld in den
+    Paragraphen mit der ID Output übertragen werden.
+    Es soll also 1:1 angezeigt werden was in dem Text-Input dargestellt wird
+-->

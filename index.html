@@ -1,0 +1,307 @@
+<!-- Ich bin ein Kommentar -->
+<!-- Struktur einer HTML-Datei -->
+<!DOCTYPE html> <!-- Der Doctype-Tag sagt dem Browser um welche Art von Datei es sich handelt -->
+<html lang="de">
+<!-- Das html-Dokument selbst -->
+<!-- Ist aufgeteilt in zwei Bereiche -->
+
+<head>
+    <!-- Für Informationen über das Dokument -->
+    <!-- Ist das was im Tab angezeigt wird -->
+    <title>
+        Hello World!
+    </title>
+    <!-- Die roten Wörter sind sogenannte Attribute, das in den Anführungszeichen ist der Wert -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Der viewport meta Tag legt fest, dass die Seitenbreite sich an den Bildschirm des Benutzers anpasst -->
+    <meta charset="utf-8">
+    <!-- Legt fest wie die Seite codiert ist -->
+    <meta name="description" content="Das ist unsere erste Übungsseite">
+    <!-- Legt fest was bei Suchmaschinen als Text unter dem Link angezeigt wird -->
+    <link rel="stylesheet" href="static/style/css/style.css">
+    <!-- <script defer src="static/script/helloworld.js"></script>
+    <script defer src="static/script/kontrollstrukturen.js"></script> -->
+    <!-- <script defer src="static/script/funktionen.js"></script> -->
+    <!-- <script defer src="static/script/predefined.js"></script> -->
+    <script defer src="static/script/objects.js"></script>
+
+
+    <!--
+    defer erzwingt, dass erst die gesamte Seite geladen wird, beovr die Skript-Datei
+    heruntergeladen wird
+    -->
+</head>
+<!-- Man kann css auf 3 verschiedene Möglichkeiten anwenden:
+    1. link-Tag und eigener css-Datei (best practice)
+    2. style-Tag benutzen und dort Css-Regeln schreiben
+    3. inline-style => style-Attribut bei HTML-Element benutzen
+
+-->
+
+<body>
+    <!-- Wird nur angezeigt, falls JavaScript nicht unterstützt wird. -->
+    <noscript>
+        Ihr Browser unterstützt leider kein JavaScript.
+    </noscript>
+    <!-- Das was der User sehen kann
+        Kernbereich der Seite
+        -->
+    <div class="navbar">
+        <!-- Ist eigentlich für die Aufteilung der Seite in einzelne Bereich gedacht -->
+        <h1 id="kapitel1">
+            Wilkommen auf index.html
+        </h1>
+        <!-- Header-Tag -->
+        <!-- h1 - h6 -->
+        <!-- Absteigend von der Wichtigkeit -->
+        <!-- h1 ist die wichtigste Überschrift und h6 die unwichtigste -->
+        <!-- h1 sollte man nur ienmal pro Seite benutzen (aus SEO Gründen) -->
+        <!-- Die anderen kann man beliebig oft verwenden -->
+        <h2>
+            Text-Tags
+        </h2>
+        <div>
+            <!-- p steht für Paragraph, p beginnt immer in einer neuen Zeile -->
+            <p>
+                <!-- Die strong- und b-Tags stellen Text fett dar -->
+                <!-- b gilt als veraltet und sollte nicht mehr benutzt werden -->
+                <strong>Test.</strong> <b>asdasd</b>
+                <!-- em und i-Tags stellen Text kursiv dar -->
+                <!-- i wird inziwschne fast nur noch für Icons benutzt -->
+                <em>sad</em>
+
+
+                <i>sdasd</i>
+            </p>
+            <h3>Text-Formatierung:</h3>
+            <p>
+                Subskript: 2<sub>2</sub>
+            </p>
+            <p>
+                Superskript: 2<sup>2</sup>
+            </p>
+            <p>
+                <small>Kleiner Text</small>
+            </p>
+            <p>
+                <mark>Farblich markiert</mark>
+            </p>
+            <p>
+                <del>Ich bin durchgestrichen</del>
+            </p>
+            <p>
+                <ins>Neu hinzugefügt</ins>
+            </p>
+            <blockquote>
+                Ich werde etwas eingerückt dargestellt - berühmte Person
+            </blockquote>
+            <!-- Längere Zitate -->
+            <p>
+                <q>Ich bin ein kurzes Zitat</q>
+                <!-- quote -->
+                <!--  Kürzere Zitate -->
+            </p>
+            <p>
+                <cite>Harry Potter</cite> <abbr title="Joanne K. Rowling">J.K.R</abbr>
+            </p>
+            <p>
+                Für Adressen:
+            <address>
+                12345 Musterstadt
+            </address>
+            </p>
+            <!-- Ist für Textinhalte gedacht -->
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates at, cupiditate in nulla vero quia
+                perspiciatis aperiam ratione molestiae repudiandae totam nam consectetur vitae cum accusantium ipsam
+                commodi magnam quas!
+            </p>
+            <span>
+                Ich bin der Span-Tag
+            </span>
+            <span>
+                Ich bin der zweite Span-Tag
+            </span>
+            <!-- Formatierung wird übernommen-->
+            <pre>
+Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Blanditiis similique minus, nihil eveniet incidunt ea,
+laboriosam quo deserunt sint voluptatem dolorem harum voluptate magni deleniti
+nostrum maiores inventore cupiditate. Fugiat!Lorem ipsum dolor, sit amet consectetur
+adipisicing elit. Iusto quis earum esse inventore voluptatem possimus consectetur doloribus vitae
+, nam repellendus exercitationem laudantium provident! Veritatis esse facere aut sequi est ipsum!Lorem
+ipsum dolor sit amet consectetur adipisicing elit. Excepturi totam aperiam autem quae nostrum ipsa dicta
+quibusdam mollitia commodi! Voluptas alias cumque qui distinctio cum soluta officiis sapiente odio! Neque.
+                    </pre>
+        </div>
+        <h3>
+            Listen:
+        </h3>
+        <div>
+            <p>Ungeordnete Liste:</p>
+            <p>Die Listen-Tags enthalten andere Listen-Tags oder listitem-Tags</p>
+            <ul>
+                <li>Stichpunkt</li>
+                <ul>
+                    <li>Unterpunkt1</li>
+                    <li>Unterpunkt2</li>
+                    <ul>
+                        <li>Weiterer Unterpunkt</li>
+                    </ul>
+                </ul>
+            </ul>
+            <p>Geordnete Liste:</p>
+            <ol type="A" start="200">
+                <li>Punkt</li>
+                <ol>
+                    <li>
+                        Unterpunkt1
+                    </li>
+                    <li>
+                        Unterpunkt2
+                    </li>
+                </ol>
+                <li>Punkt</li>
+                <li>Punkt</li>
+            </ol>
+            <p>
+                Definitions-Liste:
+
+            </p>
+            <dl>
+                <dt>HTML</dt>
+                <dd>
+                    Steht für Hyper Text Markup Language und ist weit verbreitet im WEb
+                </dd>
+            </dl>
+        </div>
+        <h4>
+            Anchor-Tag
+        </h4>
+        <!-- Verlinkt zu unserer anderen Seite -->
+        <a href="welcome.html">Welcome-Seite</a>
+        <!-- Verlinkt auf eine id auf unserer Seite und springt beim klicken hoch -->
+        <a href="#kapitel1">Springe zu Kapitel1</a>
+        <!-- Zum öffnen eines neuen Tabs: -->
+        <a href="https://www.ppedv.de" target="_blank">ppedv-Seite</a>
+        <a href="#">Platzhalter</a>
+        <h5>
+            Tabellen in HTML:
+        </h5>
+        <!-- Definiert Anfang und Ende einer Tabelle -->
+        <table>
+            <!-- Thead definiert den Kopfbereich -->
+            <thead>
+                <!-- tr ist eine Zeile => tablerow -->
+                <tr>
+                    <th colspan="4">Bestellung 123545</th>
+                </tr>
+                <tr>
+                    <!-- th ist eine Überschrift => tableheader -->
+                    <th scope="col">
+                        Produkt
+                    </th>
+                    <th scope="col">
+                        Anzahl
+                    </th>
+                    <th scope="col">
+                        Stückpreis
+                    </th>
+                    <th scope="col">
+                        Gesamtpreis
+                    </th>
+                </tr>
+            </thead>
+            <!-- Körper der Tabelle -->
+            <tbody>
+                <tr>
+                    <th scope="row">Produkt1</th>
+                    <!-- td ist der Wert einer Spalte => tabledata -->
+                    <td>4</td>
+                    <td>100€</td>
+                    <td>400€</td>
+                </tr>
+                <tr>
+                    <th scope="row">Produkt2</th>
+                    <!-- td ist der Wert einer Spalte => tabledata -->
+                    <td>2</td>
+                    <td>150€</td>
+                    <td>300€</td>
+                </tr>
+                <tr>
+                    <th scope="row">Produkt3</th>
+                    <!-- td ist der Wert einer Spalte => tabledata -->
+                    <td>12</td>
+                    <td>50€</td>
+                    <td>600€</td>
+                </tr>
+            </tbody>
+            <!-- Fußzeile der Tabelle -->
+            <tfoot>
+                <th scope="row" colspan="3" style="text-align: start;">Kosten gesamt:</th>
+                <td>1300€</td>
+            </tfoot>
+        </table>
+        <h6>
+            Bilder & Videos in HTML einbauen
+        </h6>
+        <p>Bilder:</p>
+        <!-- Das src-Attribut legt fest wo das Bild liegt, kann sowohl ein relativer Pfad sein -->
+        <!-- Also irgendwo in unserem eignenem Projekt liegen -->
+        <!-- Absolute URL, falls das Bild auf einer anderen Seite liegt -->
+        <!-- src und alt sollten immer vorhanden sein -->
+        <!-- heigth und width sollten vermieden werden -->
+        <img src="https://via.placeholder.com/250x250" alt="Ein Platzhalterbild" height="125">
+        <!-- Alt gibt an was dargestellt wird, falls das Bild nicht gefunden werden kann 
+        oder falls ein Screenreader es vorliest
+        -->
+        <!-- Als alternative zum img-Tag -->
+        <div>
+        <picture>
+            <source srcset="https://via.placeholder.com/500x500" 
+            media="(min-width: 800px)">
+            <source srcset="https://via.placeholder.com/250x250" 
+            media="(min-width: 500px)">
+            <img src="https://via.placeholder.com/125x125" alt="Ein weiteres Platzhalterbild">
+        </picture>
+    </div>
+    <p>Videos:</p>
+    <!-- Im Videotag muss mindestens ein source-Tag stehen -->
+    <!-- Mehrere verschiedenen Sources können angegeben werden -->
+    <!-- Browser nimmt sich das erste passende Videoformat -->
+    <video controls autoplay>
+        <source src="hd0992.mov" type="video/mov">
+    </video>
+    <!-- 
+        controls - stellt die Bedienungsoberfläche dar
+        autoplay - Spielt Video automatisch ab
+        height/width - Ändert die Größe
+        loop - Video wiederholt sich
+        muted - Video wird standardmäßig stumm abegspielt
+        poster - Thumbnail, das angezeigt wird, falls das Video auf Stopp ist
+    -->
+    </div>
+    <div class="content">
+        <p id="main-text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit nihil voluptate ullam amet ducimus natus possimus rem iusto doloremque, impedit distinctio aliquam expedita vero quasi assumenda adipisci commodi facilis quos!
+        </p>
+    </div>
+    <div class="footer">
+    </div>
+    <!-- Attribute, die bei jedem Element funktionieren:
+        class eigentlich fürs styling gedacht um meherere Elemente gleich zu stylen
+        id, für Funktionen und Styling Gedacht
+    -->
+    <!-- 
+        Wir erstellen eine HTML-Seite
+        "aboutme.html"
+        Auf der HTML Seite soll ein kuzer Paragraph sein mit Namen und Alter
+        Eine Liste mit Hobbies
+        Eine kleine Tabelle mit willkürlichen Zahlen
+        Ein Bildchen mit img oder picture Tag
+    -->
+    <!-- <script> Lieber nicht
+        console.log("Hallo Welt!");
+    </script> -->
+</body>
+</html>

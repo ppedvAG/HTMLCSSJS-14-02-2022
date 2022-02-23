@@ -1,0 +1,202 @@
+/* Ich bin ein Kommentar */
+/* Das Zeichen vorne ist der Selektor, die Klammer ist der Block, der Inhalt der Klammer */
+/* ist die Deklaration/Declaration */
+/* Alles zusammen ist eine Regel/Rule */
+p {
+    color: rgb(233, 2, 21);
+    font-size: 26px;
+}
+
+/* Selektor-Arten: */
+
+/*
+    * - Universalselektor, trifft alle Elemente
+*/
+
+/* * {
+    background-color: brown;
+} */
+
+/*
+    Tag (z.B. p/h1/h4 usw.) - Trifft alle Elemente mit dem spezifizierten Tag
+*/
+
+/* div {
+    background-color: violet;
+} */
+
+/* Gruppenselektor */
+/* Erlaubt es uns mehrere Elemente gleich zu stylen */
+h1, h2, h3 {
+    color: green;
+}
+
+/* Nachfahren-Selektor */
+/* Trifft alle li-Tags, die innerhalb eines ul-Tags stehen */
+ul > li {
+    font-size: 30px;
+}
+/* Allgemeine Geschwister-Selektor */
+/* Alle span-Tags treffen die nach einem p-Tag stehen */
+p ~ span {
+    background-color: blue;
+}
+
+/*  Reihenfolge ist wichtig */
+/*  Falls zwei gleichspezifische Regeln deklariert wurden, gilt die, die als letztes deklariert wurde */
+
+/* Benachbarte Geschwister-Selektor */
+/* Trifft nur einen span-Tag der direkt nach einem p-Tag steht */
+p + span {
+    background-color: yellow;
+}
+
+/* Klassen-Selektor */
+/* Trifft alle Elemente die der Klasse angehören */
+div.content {
+    height: 120px;
+    background-color: azure;
+}
+
+.footer {
+    height: 120px;
+    background-color: white;
+}
+
+/* ID-Selektor */
+/* Trifft nur das Element mit der entsprechenden ID */
+/* Spezifischter Selektor */
+#main-text {
+    color: black;
+    font-size: 24px;
+}
+
+
+
+/* Eigenschaften: */
+
+/* color - Textfarbe */
+/* background-color - Hintergrundsfarbe */
+/* font-size - Textgröße */
+/* font-style - Textstil (italix, normal, oblique) */
+/* font-weigth - Schriftgewichtung / Fettgeschrieben  */
+/* font-family - Schriftart Neue können über google-fonts geladen werden*/
+/* text-decoration - Unterstreichung */
+/* text-align - Horizontale Textausrichtung */
+/* vertical-aling - Vertikale Ausrichutng von inline-ELementen (z.B. span)  */
+/* heigth - Höhe des Elements nur bei block/inline-block Elementen */
+/* width - Breite des Elements nur bei block/inline-block Elementen */
+/* display - Anzeigeart des Elements */
+/* DIe meisten HTML-ELemente sind Block Elemente (div ist die Basis der Block-Elemente) */
+/* Block Elemente nehmen immer eine ganze Zeile ein */
+/* Inline Elemente nehmen nur so viel Platz wie sie benötigen */
+/* Inline-Block elemente nehemen nur so viel Platz ein wie sie benötigen, außer  */
+/* wir setzten eine fixe Höhe oder Breite */
+/* none entfernt das Elemente das Element aus dem Fluss der Seite => Elemente darunter
+    rutschen hoch */
+
+
+/* CSS-Box Modell */
+/* Jedes Element wird von CSS als Box dargestellt */
+/* Von innen nach außen: */
+/* Content: 
+    Höhe ist meistens automatisch, die Breite ist bei block Elemnten die Breite
+    des übergeordneten Elementes => nimmt eine ganze Zeile ein
+    Falls wir direkt heigth und width setzten, sind das die Größen des Contents
+    Bei inline-Elementen sind Höhe und Breite immer automatisch auf die tatsächliche
+    Länge des Contents beschränkt
+    Hintergrundfarbe wird von Element bestimmt
+ */
+/* Padding:
+    Syntax: 
+    1. padding: {Wert für oben} {rechts} {unten} {links};
+    2. padding: {Wert oben/unten} {wert links/rechts};
+    3. padding: {wert für alle Seiten};
+    Padding ist der Abstand des Contents zur Border
+    Hintergrundfarbe wird vom Element bestimmt
+ */
+/* Border:
+    Grenze zwischen Padding und Margin
+    Syntax: 
+    border: {farbe} {stil} {breite};
+    Nimmt eigene Farbe an und nicht die des Elementes
+ */
+/* Margin:
+    Abstand zu den umliegenden Elementen
+    Syntax: 
+    1. margin: {Wert für oben} {rechts} {unten} {links};
+    2. margin: {Wert oben/unten} {wert links/rechts};
+    3. margin: {wert für alle Seiten};
+    Nimmt nicht Farbe des Elementes an
+ */
+
+/* 
+    Absolute EInheiten:
+    px - Pixel (1/96 inch)
+    cm - Zentimeter
+    mm - Milimeter
+    in - Inch ~ 2,5 cm
+    pt - Point (1/72 inch)
+    pc - 12pt 
+
+    Relative Einheiten:
+    - Selten -
+    ex - Relativ zur x-Höhe der Schriftart
+    ch - Die Breite der 0 der derzeitigen Schriftart
+    - Häufig -
+    !!em - Schriftgröße des Elementes
+    !!rem - Schriftgröße des root-Elementes (html-Dokument/body)
+    vw - 1% der Breite des Fensters
+    vh - 1% der Höhe des Fensters
+    vmin - 1% der kleineren Seite des Fensters
+    vmax - 1% der größeren Seite des Fensters
+    % - Relativ zur Größe des Elternelementes
+ */
+
+/* 
+    display: none => Seite verhält sich als ob Element nicht existiert
+    visibility: hidden => Element wird nicht angezeigt, aber Seite beachtet es weiterhin
+ */
+
+
+/* Position:
+    static - Jedes Element ist von Natur aus Static
+        ignoriert die Positionsparameter (top,left,bottom, right)
+        Element richtet sich nach dem Aufbau des Dokuments
+        position: static; => relativ sinnlos, da jedes Element schon static ist
+    
+    relative - Element verschiebt sich relativ zur ursprünglichen Position
+        Schiebt sich vom Positionsparameter weg
+        Syntax:
+            position: relative;
+            top: 2rem; Schiebt sich 2 rem vom oberen Rand weg
+    
+    fixed - Element positioniert sich relativ zum Sichtfeld des Users
+
+    sticky - Element verhält sich static, bis es aus dem Sichtbereich
+            verschwinden würde, dann wird es fixed
+
+    absolute - Verschiebt sich relativ zum nächsten nicht static VOrgänger
+    Falls es keine Vorgänger gitb, der nicht static ist verschiebt es sich relativ zum
+    html-Tag
+
+
+    Heute größtenteils mit flexbox und grid ersetzt
+
+*/
+
+/* Tabellen Stylen:
+
+*/
+
+table {
+    border-collapse: collapse;
+    /* 
+    Legt die Border der aneinander grenzenden td, und th Elemente zusammen
+    Ohne die Deklaration werden die Border doppel-randing dargestellt 
+    */
+}
+
+th, td {
+    border: black 2px solid;
+}

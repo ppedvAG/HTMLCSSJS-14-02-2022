@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+    <script defer src="static/script/dom.js"></script>
+    <link rel="stylesheet" href="static/style/css/styleDom.css">
+</head>
+<body>
+    <h1 style="color:red;">DOM</h1>
+    <p>Document Object Model</p>
+    <p>Ist eine JavaScript API</p>
+    <p>Ist eine von 80 APIS</p>
+    <p>Sie bietet uns die Möglichkeit direkt mit den HTML-Objekten und deren CSS-Eigenschaften zu interagieren</p>
+    <div> <!-- Ancestor von ul/li/div/p-->
+        <ul class="list"> <!--Parent von li-->
+            <li>Beispiel1</li> <!-- Child von ul-->
+            <li>Beispiel2</li> <!-- Descendant von div/body/root-->
+            <li>Beispiel3</li>
+            <li>Beispiel4</li>
+            <li>Beispiel5</li>
+            <li>Beispiel6</li>
+        </ul> <!-- Sibling von div unter sich und child von div in Zeile 16-->
+        <div> <!-- Sibling von ul-->
+            <p id="important">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est nemo neque ducimus, quos numquam sapiente ipsa, laboriosam odit nisi esse, perspiciatis beatae porro unde consequuntur quis doloribus recusandae facere ipsam!</p>
+        </div>
+    </div>
+    <img id="pic" href="http://via.placeholder.com/350x150" alt="Ein Bild">
+</body>
+</html>
